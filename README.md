@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+React Quiz App
+This is a simple multiple-choice quiz application built using React and styled with Tailwind CSS. The app presents users with one question at a time and allows them to select an answer. After answering all the questions, the app displays the final score along with a personalized message based on the score.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+One question displayed at a time
+Users can navigate through the questions
+Displays the user's score at the end of the quiz
+Conditional messages based on the user's performance:
+Congratulations, you're a legend! for a perfect score
+Try harder another time! for scores below 4
+General message for scores in between
+Option to restart the quiz after completion
+Learning Objectives
+Use React state to track user progress through the quiz
+Handle user interactions (e.g., selecting an answer, navigating between questions)
+Conditional rendering based on the user's score
+Use Tailwind CSS for styling and responsive design
+Table of Contents
+Installation
+Usage
+Code Explanation
+Screenshots
+License
+Installation
+To set up the project on your local machine, follow these steps:
 
-## Available Scripts
+Clone the repository:
 
-In the project directory, you can run:
+bash
+Copy code
+git clone https://github.com/Abidoyesimze/Quiz-app.git
+Navigate to the project directory:
 
-### `npm start`
+cd react-quiz-app
+Install dependencies:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+npm install
+Start the development server:
 
-### `npm test`
+npm start
+Open the app in your browser at http://localhost:3000.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Usage
+Upon loading the quiz, you will see the first question along with four answer options.
+Select your answer and click the Next button to proceed.
+After answering all questions, the quiz will display your final score and a personalized message.
+You can restart the quiz by clicking the Restart Quiz button.
+Code Explanation
+React State Management: We use useState hooks to track:
 
-### `npm run build`
+The current question index
+The selected answer for each question
+The user's score
+Whether the quiz has been completed
+Quiz Questions: Questions are stored in an array, where each object represents a question with its options and the correct answer.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Quiz Logic:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+When the user selects an answer and clicks Next, the app checks if the answer is correct and updates the score.
+If the user reaches the end of the quiz, the score and a personalized message are displayed.
+Tailwind CSS Styling: Tailwind CSS is used for responsive styling, buttons, and layout alignment. The app has a clean and simple UI with hover effects and visual feedback for selected answers.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Conditional Messages: Based on the user’s score, the app displays different messages:
 
-### `npm run eject`
+Perfect Score: "Congratulations, you're a legend!"
+Below 4: "Try harder another time!"
+Other Scores: "Quiz Completed!"
+Screenshots
+Quiz Question
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Quiz Completed - Perfect Score
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Quiz Completed - Try Harder
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
