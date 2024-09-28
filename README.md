@@ -28,7 +28,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/Abidoyesimze/Quiz-app.git
+git clone https://github.com/Abidoyesimze/Quiz.git
 Navigate to the project directory:
 
 cd react-quiz-app
